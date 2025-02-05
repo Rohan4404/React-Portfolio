@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import Profile_Img from "../../assets/imgpsh_fullsize_anim.jpeg";
+import Profile_Img from "../../assets/profile_img.jpeg";
 
 function Hero() {
   return (
