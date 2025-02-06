@@ -5,7 +5,7 @@ import Profile_img from "../../assets/imgpsh_fullsize_anim.jpeg";
 
 function About() {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-title">
         <h1>About me</h1>
         <img src={About_me} alt="" />
