@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mywork.css";
-import theme_pattern from "../../assets/About_Me.svg";
+import theme_pattern from "/About_Me.svg";
 import mywork_data from "../../assets/mywork_data";
 
 function Mywork() {

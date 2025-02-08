@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
-import About_me from "../../assets/About_Me.svg";
-import Profile_img from "../../assets/imgpsh_fullsize_anim.jpeg";
+import About_me from "/About_Me.svg";
+import Profile_img from "/imgpsh_fullsize_anim.jpeg";
 
 function About() {
   return (
@@ -10,7 +10,7 @@ function About() {
         <h1>About me</h1>
         <img src={About_me} alt="" />
       </div>
-      -
+
       <div className="about-sections">
         <div className="about-left">
           <img src={Profile_img} alt="" />

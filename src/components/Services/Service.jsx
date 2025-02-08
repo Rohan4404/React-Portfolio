@@ -1,8 +1,7 @@
 import React from "react";
 import "./Service.css";
-import theme_pattern from "../../assets/About_Me.svg";
+import theme_pattern from "/About_Me.svg";
 import Services_Data from "../../assets/services_data";
-// import arrow_icon from "../../assets/arrow_icon.png";
 
 const Service = () => {
   return (

@@ -1,8 +1,31 @@
 import React from "react";
 import "./Contact.css";
-import themePattern from "../../assets/About_Me.svg";
+import themePattern from "/About_Me.svg";
 
 function Contact() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "d1a013f5-9431-400a-8608-147d1f757628");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      alert(res.message);
+    }
+  };
+
   return (
     <div id="contact" className="contact">
       <div className="contact-title">
@@ -32,7 +55,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <form className="contact-right">
+        <form onSubmit={onSubmit} className="contact-right">
           <label htmlFor="">Your Name</label>
           <input type="text" placeholder="Enter your Name" name="name" />
           <label htmlFor="">Your Email</label>
